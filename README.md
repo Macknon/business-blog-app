@@ -6,6 +6,13 @@
 Considering blogs as the business news vehicle of the future, and as a business owner or reviewer. This proposed web app is a tool to connect with prospect customers or other businesses. Due to its personal touch, it can keep clients informed of not only your latest product offerings but also other but your internal business ventures as a way to gain their trust. This leads to trustworthiness and accountability as well keeping us focused on our published and public goals. As a reviewer it helps market other businesses.
 ##### 2.	Project Scope
 The basic functionalities of the app will be implemented via a responsive web app for any device allowing creation and sharing of the articles, it will however be limited not having a comment section or like/upvote marker to rank a post or article.
+The scope will include:
+- Registration & Login Panel
+- Authentication & Authorization mechanisms
+- Create business review
+- Edit/Updating the business review
+- Pulling down the business review if needed.
+
 ##### 3.	High-Level Requirements
 The blog system is web based which will allow the business bloggers to login/register, create a blog, view and share the post and categorize them. 
 ##### 4.	Deliverables
