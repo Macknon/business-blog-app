@@ -28,6 +28,13 @@
             <li><a class="{{Request::routeIs('news.index') ? 'active' : ''}}" href="{{route('news.index')}}">All News</a></li>
             <li><a class="{{Request::routeIs('about') ? 'active' : ''}}" href="{{route('about')}}">About</a></li>
             <li><a class="{{Request::routeIs('contact.index') ? 'active' : ''}}" href="{{route('contact.index')}}">Contact</a></li>
+            @guest
+            <li><a class="{{Request::routeIs('login') ? 'active' : ''}}" href="{{route('login')}}">Login</a></li>
+            <li><a class="{{Request::routeIs('register') ? 'active' : ''}}" href="{{route('register')}}">Register</a></li>
+            @endguest
+            @auth
+            <li><a class="{{Request::routeIs('dashboard') ? 'active' : ''}}" href="{{route('register')}}">Dashboard</a></li>
+            @endauth
           </ul>
         </div>
 
