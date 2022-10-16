@@ -2,7 +2,7 @@
 
 @section('header')
 <!-- header -->
-<header class="header" style="background-image: url({{asset("images/photography.jpg")}})">
+<header class="header" style="background-image: url({{asset("images/newspapers.jpg")}})">
         <div class="header-text">
           <h1>Business Reviews for SMEs</h1>
           <h4>Dashboard of genuine business news...</h4>
@@ -17,53 +17,20 @@
       <main class="container">
         <h2 class="header-title">Latest Business News</h2>
         <section class="cards-blog latest-blog">
-          <div class="card-blog-content">
-            <img src="{{('images/pic1.jpg')}}" alt="" />
-            <p>
-              2 hours ago
-              <span style="float: right">Written By Alphayo Wakarindi</span>
-            </p>
-            <h4 style="font-weight: bolder">
-              <a href="single-blog.html"
-                >Benefits of Getting Covid 19 Vaccination</a
-              >
-            </h4>
-          </div>
 
-          <div class="card-blog-content">
-            <img src="{{('images/pic2.jpg')}}" alt="" />
-            <p>
-              23 hours ago
-              <span style="float: right">Written By Alphayo Wakarindi</span>
-            </p>
-            <h4 style="font-weight: bolder">
-              <a href="single-blog.html">Top 10 Music Stories Never Told</a>
-            </h4>
-          </div>
+        @foreach ($allNews as $newsItem)
+        <div class="card-blog-content">
+          <img src="{{asset($newsItem->imagePath)}}" alt="" />
+          <p>
+            {{$newsItem->created_at->diffForHumans()}}
+            <span>Written By {{$newsItem->user->name}}</span>
+          </p>
+          <h4>
+            <a href="{{route('news.show', $newsItem)}}">{{$newsItem->title}}</a>
+          </h4>
+        </div>
+        @endforeach
 
-          <div class="card-blog-content">
-            <img src="{{('images/pic3.jpg')}}" alt="" />
-            <p>
-              2 days ago
-              <span style="float: right">Written By Alphayo Wakarindi</span>
-            </p>
-            <h4 style="font-weight: bolder">
-              <a href="single-blog.html"
-                >WRC Safari Rally Back To Kenya After 19 Years</a
-              >
-            </h4>
-          </div>
-
-          <div class="card-blog-content">
-            <img src="{{('images/pic4.jpg')}}" alt="" />
-            <p>
-              3 days ago
-              <span style="float: right">Written By Alphayo Wakarindi</span>
-            </p>
-            <h4 style="font-weight: bolder">
-              <a href="single-blog.html">Premier League 2021/2022 Fixtures</a>
-            </h4>
-          </div>
         </section>
       </main>
 @endsection

@@ -15,7 +15,7 @@
 
                     <div class="dashboard">
                         <ul>
-                            <li><a href="">Make Business Review</a></li>
+                            <li><a href="{{route('news.create')}}">Make Business Review</a></li>
                             <li><a href="">Create A ategory</a></li>
                             <li><a href="">Categories List</a></li>
 
