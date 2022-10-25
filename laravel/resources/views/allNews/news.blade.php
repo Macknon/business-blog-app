@@ -29,7 +29,7 @@
           
           @if (auth()->user()->id === $newsItem->user->id)
           <div class="post-buttons">
-            <a href="">Edit</a>
+            <a href="{{ route('news.edit', $newsItem) }}">Edit</a>
             <form action="" method="">
               <input type="submit" value=" Delete">
             </form>

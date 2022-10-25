@@ -30,6 +30,10 @@ Route::get('/news/add', [BizNewsController::class, 'create'])->name('news.create
 */
 Route::get('/news/{newsItem:slug}', [BizNewsController::class, 'show'])->name('news.show');
 
+Route::get('/news/{newsItem}/edit', [BizNewsController::class, 'edit'])->name('news.edit');
+
+Route::put('/news/{newsItem}', [BizNewsController::class, 'update'])->name('news.update');
+
 Route::post('/news', [BizNewsController::class, 'store'])->name('news.store');
 
 Route::get('/about', function () { return view('about'); })->name('about');

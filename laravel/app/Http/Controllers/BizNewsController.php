@@ -49,13 +49,52 @@ class BizNewsController extends Controller
 
         return redirect()->back()->with('status', 'Review Added successfully');
     }
+
+    public function edit(News $newsItem){
+        if (auth()->user()->id !== $newsItem->user->id) {
+            # code...
+            abort(403);
+        }
+        return view('allNews.edit-news', compact('newsItem'));
+    }
+
+    public function update(Request $request, News $newsItem){
+        if (auth()->user()->id !== $newsItem->user->id) {
+            # code...
+            abort(403);
+        }
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required | image',
+            'highlight' => 'required',
+            'body' => 'required'
+        ]);
+        
+        $title = $request->input('title');
+        $slugId = $newsItem->id;
+        $slug = Str::slug($title, '-') . '-' . $slugId;
+        $body = $request->input('body');
+        $highlight = $request->input('highlight');
+        $imagePath = 'storage/' . $request->file('image')->store('imgs', 'public'); //i.e 'storage/'. imgs/aC6D6MHT66S8m5cgmefeukueo8W5fYStDq0fKC7b.jpg
+        
+        $news = News::find($slugId);
+
+        $news->title = $title;
+        $news->slug = $slug;
+        $news->body = $body;
+        $news->highlight = $highlight;
+        $news->imagePath = $imagePath;
+
+        $news->save();
+
+        return redirect()->back()->with('status', 'The Review has been Updated!');
+    }
+
     /*
-    *
     public function show($slug){
         $newsItem = News::where('slug', $slug)->first();
         return view('allNews.selected-news', compact('newsItem'));
     }
-    *
     */
 
     public function show(News $newsItem){
