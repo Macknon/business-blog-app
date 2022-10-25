@@ -9,6 +9,10 @@ use App\Models\News;
 
 class BizNewsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->except(['index']);
+    } 
+
     public function index(){
         // $allNews = News::all();
         $allNews = News::latest()->get();

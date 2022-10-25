@@ -24,7 +24,10 @@ Route::get('/news', [BizNewsController::class, 'index'])->name('news.index');
 
 //add taking precedence of slug route to prevent 404
 Route::get('/news/add', [BizNewsController::class, 'create'])->name('news.create');
-
+/*
+alternative auth::
+Route::get('/news/add', [BizNewsController::class, 'create'])->name('news.create')->middleware('auth');
+*/
 Route::get('/news/{newsItem:slug}', [BizNewsController::class, 'show'])->name('news.show');
 
 Route::post('/news', [BizNewsController::class, 'store'])->name('news.store');
