@@ -445,6 +445,32 @@ textarea {
   color: #000;
   text-decoration-line: underline;
 }
+
+/* others */
+.post-buttons {
+  display: flex;
+}
+
+.post-buttons a {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  margin-right: 10px;
+  color: #fff;
+  margin-bottom: 7px;
+  display: inline-block;
+}
+
+.post-buttons input {
+  padding: 10px 13px;
+  background-color: red;
+  color: #fff;
+  margin-bottom: 7px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
 /* Medium devices and below */
 
 @media (max-width: 768px) {

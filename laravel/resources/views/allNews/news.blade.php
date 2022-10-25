@@ -25,6 +25,18 @@
 
         @foreach ($allNews as $newsItem)
         <div class="card-blog-content">
+          @auth
+          
+          @if (auth()->user()->id === $newsItem->user->id)
+          <div class="post-buttons">
+            <a href="">Edit</a>
+            <form action="" method="">
+              <input type="submit" value=" Delete">
+            </form>
+          </div>    
+          @endif
+          
+          @endauth
           <img src="{{asset($newsItem->imagePath)}}" alt="" />
           <p>
             {{$newsItem->created_at->diffForHumans()}}
