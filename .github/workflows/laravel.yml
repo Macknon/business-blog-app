@@ -1,4 +1,4 @@
-name: Business Blog
+name: Business Blog App
 
 on:
   push:
