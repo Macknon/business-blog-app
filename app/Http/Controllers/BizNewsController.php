@@ -10,17 +10,27 @@ use App\Models\News;
 class BizNewsController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth')->except(['index']);
+        $this->middleware('auth')->except(['index','show']);
     } 
 
-    public function index(){
-        // $allNews = News::all();
-        $allNews = News::latest()->get();
+    public function index(Request $request){
+        if ($request->search) {
+            # code...
+            $allNews = News::where("title", "like", "%". $request->search. "%")
+            ->orWhere("body", "like", "%". $request->search. "%")
+            ->latest()->paginate(4);
+        }else {
+            # $allNews = News::all();
+        $allNews = News::latest()->paginate(4);;
+        }
+        
         return view('allNews.news', compact('allNews'));
     }
+
     public function create(){
         return view('allNews.add-news');
     }
+
     public function store(Request $request){
         $request->validate([
             'title' => 'required',
@@ -99,5 +109,10 @@ class BizNewsController extends Controller
 
     public function show(News $newsItem){
         return view('allNews.selected-news', compact('newsItem'));
+    }
+
+    public function destroy(News $newsItem){
+        $newsItem->delete();
+        return redirect()->back()->with('status', 'Your Review has been Removed!');
     }
 }
