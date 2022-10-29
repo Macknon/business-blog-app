@@ -15,6 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         //
+        return view('categories.categories');
     }
 
     /**
@@ -37,6 +38,18 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name' => 'required | unique:categories',
+        ]);
+        
+        $name = $request->input('name');
+       
+        $category = new Category();
+        $category->name = $name;
+   
+        $category->save();
+
+        return redirect()->back()->with('status', 'Category Added successfully');
     }
 
     /**

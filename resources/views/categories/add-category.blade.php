@@ -6,54 +6,29 @@
 @section('main')
     <main class="container" style="background-color: #fff;">
         <section id="contact-us">
-            <h1 style="padding-top: 50px;">Create New Post!</h1>
+            <h1 style="padding-top: 50px;">Make Category!</h1>
             @if (session('status'))
                <p style="text-align:center; color:#fff; background:rgb(53, 199, 8); padding: 17px 0; margin-bottom: 16px; font-weight:700;">{{session("status")}}</p> 
             @endif
             
             <!-- Contact Form -->
             <div class="contact-form">
-                <form action={{route('news.store')}} method="post" enctype="multipart/form-data">
+                <form action={{route('categories.store')}} method="post">
                     @csrf
-                    <!-- Title -->
-                    <label for="title"><span>Title</span></label>
-                    <input type="text" id="title" name="title" value="{{ old('title') }}" />
-                    @error('title')
+                    <!-- name -->
+                    <label for="title"><span>Name</span></label>
+                    <input type="text" id="name" name="name" value="{{ old('name') }}" />
+                    @error('name')
                         <p style="color: red; margin-bottom:25px;">{{$message}}</p>
                     @enderror
-                    <!-- Image -->
-                    <label for="image"><span>Image</span></label>
-                    <input type="file" id="image" name="image" />
-                    @error('image')
-                        <p style="color: red; margin-bottom:25px;">{{$message}}</p>
-                    @enderror
-                    <!-- Highlight -->
-                    <label for="highlight"><span>Highlight</span></label>
-                    <input type="text" id="highlight" name="highlight" value="{{ old('highlight') }}" />
-                    @error('highlight')
-                        <p style="color: red; margin-bottom:25px;">{{$message}}</p>
-                    @enderror
-  
-                    <!-- Drop down -->
-                    <label for="categories"><span>Choose a category:</span></label>
-                    <select name="category_id" id="categories">
-                        <option selected disabled>Select option </option>
-                            <option value=""></option>         
-                    </select>
-                    @error('highlight')
-                        <p style="color: red; margin-bottom:25px;">{{$message}}</p>
-                    @enderror
-         
-
-                    <!-- Body-->
-                    <label for="body"><span>Body</span></label>
-                    <textarea id="body" name="body">{{ old('body') }}</textarea>
-                    @error('body')
-                        <p style="color: red; margin-bottom:25px;">{{$message}}</p>
-                    @enderror
+                
                     <!-- Button -->
                     <input type="submit" value="Submit" />
                 </form>
+            </div>
+
+            <div class="create-categories">
+                <a href="{{route('categories.index')}}">List of Categories<span>&#8594;</span></a>
             </div>
 
         </section>
