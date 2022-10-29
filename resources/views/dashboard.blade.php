@@ -16,8 +16,8 @@
                     <div class="dashboard">
                         <ul>
                             <li><a href="{{route('news.create')}}">Make Business Review</a></li>
-                            <li><a href="">Create A ategory</a></li>
-                            <li><a href="">Categories List</a></li>
+                            <li><a href="{{route('categories.create')}}">Add New Business Category</a></li>
+                            <li><a href="{{route('categories.index')}}">View all Categories</a></li>
 
                             *the footer on sidebar is hidden
                         </ul>

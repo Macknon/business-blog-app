@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use App\Models\News;
+use App\Models\Category;
 
 class BizNewsController extends Controller
 {
@@ -23,8 +24,10 @@ class BizNewsController extends Controller
             # $allNews = News::all();
         $allNews = News::latest()->paginate(4);;
         }
+
+        $categories = Category::all();
         
-        return view('allNews.news', compact('allNews'));
+        return view('allNews.news', compact('allNews', 'categories'));
     }
 
     public function create(){
@@ -40,6 +43,7 @@ class BizNewsController extends Controller
         ]);
         
         $title = $request->input('title');
+        // $slugId = 1;
         $slugId = News::latest()->take(1)->first()->id + 1;
         $slug = Str::slug($title, '-') . '-' . $slugId;
         $user_id = Auth::user()->id;

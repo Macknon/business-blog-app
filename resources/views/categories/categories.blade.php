@@ -3,12 +3,15 @@
 @section('main')
     <div class="categories-list">
         <h1>Categories List</h1>
-        @include('includes.flash-message')
+        {{-- @include('includes.flash-message') --}}
+        @if (session('status'))
+               <p style="text-align:center; color:#fff; background:rgb(53, 199, 8); padding: 17px 0; margin-bottom: 16px; font-weight:700;">{{session("status")}}</p> 
+        @endif
         @foreach ($categories as $category)
             <div class="item">
                 <p>{{ $category->name }}</p>
                 <div>
-                    <a href="{{ route('categories.edit', $category) }}">Edit</a>
+                    <a href="{{ route('categories.edit', $category) }}">Change/Edit</a>
                 </div>
                 <form action="{{route('categories.destroy', $category)}}" method="post">
                     @method('delete')
