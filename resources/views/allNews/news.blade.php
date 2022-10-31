@@ -3,9 +3,7 @@
         <!-- main -->
         <main class="container">
       <h2 class="header-title">All Business News & Reviews</h2>
-      @if (session('status'))
-               <p style="text-align:center; color:#fff; background:rgb(53, 199, 8); padding: 17px 0; margin-bottom: 16px; font-weight:700;">{{session("status")}}</p> 
-            @endif
+      @include('include.statuses')
       <div class="searchbar">
         <form action="">
           <input type="text" placeholder="Search..." name="search" />

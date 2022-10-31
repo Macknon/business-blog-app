@@ -7,9 +7,7 @@
     <main class="container" style="background-color: #fff;">
         <section id="contact-us">
             <h1 style="padding-top: 50px;">Edit this Category!</h1>
-            @if (session('status'))
-               <p style="text-align:center; color:#fff; background:rgb(53, 199, 8); padding: 17px 0; margin-bottom: 16px; font-weight:700;">{{session("status")}}</p> 
-            @endif
+            @include('include.statuses')
             
             <!-- Contact Form -->
             <div class="contact-form">
