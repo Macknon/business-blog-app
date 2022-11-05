@@ -36,9 +36,11 @@
                     <label for="categories"><span>Choose a category:</span></label>
                     <select name="category_id" id="categories">
                         <option selected disabled>Select option </option>
-                            <option value=""></option>         
+                        @foreach($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach         
                     </select>
-                    @error('highlight')
+                    @error('category_id')
                         <p style="color: red; margin-bottom:25px;">{{$message}}</p>
                     @enderror
          
