@@ -1,3 +1,16 @@
+#### App Environment
+- Windows 10
+
+#### Tools Used
+- Github, Git Actions
+- Figma
+- Laravel
+- Blade templating
+- Bootstrap
+- MySQL
+- DBeaver
+- gitignore & readme
+
 ### Business Blog Web App
 ### Macknon Injenga – SCCJ/01110/2018
 #### One Pager Assignment
