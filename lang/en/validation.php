@@ -159,6 +159,9 @@ return [
         'image' => [
             'image' => 'The file must be an image',
         ],
+        'category_id' => [
+            'required' => 'A Category should be chosen',
+        ],
     ],
 
     /*
