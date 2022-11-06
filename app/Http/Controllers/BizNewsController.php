@@ -20,7 +20,12 @@ class BizNewsController extends Controller
             $allNews = News::where("title", "like", "%". $request->search. "%")
             ->orWhere("body", "like", "%". $request->search. "%")
             ->latest()->paginate(4);
-        }else {
+        }
+        elseif ($request->category) {
+            $allNews = Category::where('name', $request->category)
+            ->firstOrFail()->news()->paginate(2)->withQueryString();
+        }
+        else {
             # $allNews = News::all();
         $allNews = News::latest()->paginate(4);;
         }
@@ -31,24 +36,32 @@ class BizNewsController extends Controller
     }
 
     public function create(){
-        return view('allNews.add-news');
+        $categories = Category::all();
+        return view('allNews.add-news', compact('categories'));
     }
 
     public function store(Request $request){
         $request->validate([
             'title' => 'required',
             'image' => 'required | image',
+            'category_id' => 'required',
             'highlight' => 'required',
             'body' => 'required'
         ]);
         
         $title = $request->input('title');
-        // $slugId = 1;
-        $slugId = News::latest()->take(1)->first()->id + 1;
+
+        if(News::latest()->first() !== null){
+            $slugId = News::latest()->take(1)->first()->id + 1;
+        } else{
+            $slugId = 1;
+        }
+
         $slug = Str::slug($title, '-') . '-' . $slugId;
         $user_id = Auth::user()->id;
         $body = $request->input('body');
         $highlight = $request->input('highlight');
+        $category_id = $request->input('category_id');
         $imagePath = 'storage/' . $request->file('image')->store('imgs', 'public'); //i.e 'storage/'. imgs/aC6D6MHT66S8m5cgmefeukueo8W5fYStDq0fKC7b.jpg
         
         $news = new News();
@@ -57,6 +70,7 @@ class BizNewsController extends Controller
         $news->user_id = $user_id;
         $news->body = $body;
         $news->highlight = $highlight;
+        $news->category_id = $category_id;
         $news->imagePath = $imagePath;
 
         $news->save();
@@ -112,7 +126,10 @@ class BizNewsController extends Controller
     */
 
     public function show(News $newsItem){
-        return view('allNews.selected-news', compact('newsItem'));
+        $category = $newsItem->category;
+
+        $relatedNews = $category->news()->where('id', '!=', $newsItem->id)->latest()->take(3)->get();
+        return view('allNews.selected-news', compact('newsItem','relatedNews'));
     }
 
     public function destroy(News $newsItem){

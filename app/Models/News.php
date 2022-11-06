@@ -16,4 +16,12 @@ class News extends Model
         # code...
         return $this->belongsTo(User::class);
     }
+
+    //review belongsTo a category
+    public function category()
+    {
+        # code...
+        return $this->belongsTo(category::class);
+    }
+
 }
