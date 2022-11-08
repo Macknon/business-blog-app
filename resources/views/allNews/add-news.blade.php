@@ -1,3 +1,4 @@
+{{-- Code for adding news --}}
 @extends('layout')
 @section('head')
 <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
