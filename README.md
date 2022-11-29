@@ -10,6 +10,7 @@
 - MySQL
 - DBeaver
 - gitignore & readme
+- Tailwind CSS
 
 ### Business Blog Web App
 ### Macknon Injenga – SCCJ/01110/2018
