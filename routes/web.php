@@ -43,6 +43,8 @@ Route::get('/about', function () { return view('about'); })->name('about');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
 # Categories Resource
 Route::resource('/categories', CategoryController::class);
 
