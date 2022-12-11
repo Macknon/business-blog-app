@@ -1,4 +1,5 @@
 {{-- Code for editing news --}}
+{{--code to test--}}
 
 @extends('layout')
 @section('head')
