@@ -71,9 +71,8 @@
       <!-- Main footer -->
       <footer class="main-footer">
         <small>
-          3rd Suite Gr floor, Hope Center, Ave Park, Nairobi
-       <br> contacts: +254 720 001 001, +254 720 002 002
-       <br> Mail to: info@macknondesigns.co.ke
+ +254 720 001 001, +254 720 002 002
+       <br>info@macknondesigns.co.ke
        <br>
           &copy 2022 Macknon Designs
         </small>
