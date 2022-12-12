@@ -4,13 +4,13 @@
 
 @endsection
 @section('main')
-    <main class="container" style="background-color: #fff;">
+    <main class="container">
         <section id="contact-us">
             <h1 style="padding-top: 50px;">Make Category!</h1>
             @include('include.statuses')
             
             <!-- Contact Form -->
-            <div class="contact-form">
+            <div class="contact-form mack-center">
                 <form action={{route('categories.store')}} method="post">
                     @csrf
                     <!-- name -->

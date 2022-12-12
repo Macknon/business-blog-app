@@ -6,13 +6,13 @@
 
 @endsection
 @section('main')
-    <main class="container" style="background-color: #fff;">
+    <main class="container">
         <section id="contact-us">
-            <h1 style="padding-top: 50px;">Create New Post!</h1>
+            <h1>Add a review/news article!</h1>
             @include('include.statuses')
             
             <!-- Contact Form -->
-            <div class="contact-form">
+            <div class="contact-form mack-center">
                 <form action={{route('news.store')}} method="post" enctype="multipart/form-data">
                     @csrf
                     <!-- Title -->
