@@ -34,9 +34,9 @@
         <div class="side-links">
           <ul>
             <li><a class="{{Request::routeIs('home.index') ? 'active' : ''}}" href="{{route('home.index')}}">Home</a></li>
-            <li><a class="{{Request::routeIs('news.index') ? 'active' : ''}}" href="{{route('news.index')}}">All News</a></li>
-            <li><a class="{{Request::routeIs('about') ? 'active' : ''}}" href="{{route('about')}}">About</a></li>
-            <li><a class="{{Request::routeIs('contact.index') ? 'active' : ''}}" href="{{route('contact.index')}}">Contact</a></li>
+            {{-- <li><a class="{{Request::routeIs('news.index') ? 'active' : ''}}" href="{{route('news.index')}}">All News</a></li> --}}
+            {{-- <li><a class="{{Request::routeIs('about') ? 'active' : ''}}" href="{{route('about')}}">About</a></li> --}}
+            <li><a class="{{Request::routeIs('contact.index') ? 'active' : ''}}" href="{{route('contact.index')}}">About Us</a></li>
             @guest
             <li><a class="{{Request::routeIs('login') ? 'active' : ''}}" href="{{route('login')}}">Login</a></li>
             <li><a class="{{Request::routeIs('register') ? 'active' : ''}}" href="{{route('register')}}">Register</a></li>
@@ -49,13 +49,14 @@
 
         <!-- sidebar footer -->
         <footer class="sidebar-footer">
+          <small>Handles</small>
           <div>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href="#business-news"><i class="fab fa-facebook-f"></i></a>
+            <a href="#business-news"><i class="fab fa-instagram"></i></a>
+            <a href="#business-news"><i class="fab fa-twitter"></i></a>
           </div>
 
-          <small>Consider following our handles</small>
+
         </footer>
       </div>
       <!-- Menu Button -->
@@ -69,12 +70,13 @@
 
       <!-- Main footer -->
       <footer class="main-footer">
-        <div>
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-        </div>
-        <small>&copy 2022 Macknon Designs</small>
+        <small>
+          3rd Suite Gr floor, Hope Center, Ave Park, Nairobi
+       <br> contacts: +254 720 001 001, +254 720 002 002
+       <br> Mail to: info@macknondesigns.co.ke
+       <br>
+          &copy 2022 Macknon Designs
+        </small>
       </footer>
     </div>
 

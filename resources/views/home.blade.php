@@ -6,13 +6,18 @@
         <div class="header-text">
           <h1>Business Reviews for SMEs</h1>
           <h4>Dashboard of genuine business news...</h4>
+        <div class="insider-div">
+           <a class="insider" href="{{route('news.index')}}">
+              View Reviews and News articles
+           </a>
+        </div>
         </div>
         <div class="overlay"></div>
       </header>
 @endsection
       
 
-@section('main')
+{{-- @section('main')
       <!-- main -->
       <main class="container">
         <h2 class="header-title">Latest Business News</h2>
@@ -33,4 +38,4 @@
 
         </section>
       </main>
-@endsection
+@endsection --}}

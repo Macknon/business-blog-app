@@ -4,41 +4,39 @@
 
 <!-- main -->
 <main class="container">
+
+    <section class="single-blog-post">
+        <h1>About Us</h1>
+        {{-- <div class="single-blog-post-ContentImage" data-aos="fade-left">
+          <img src="{{asset('images/photography.jpg')}}" alt="" />
+        </div> --}}
+
+        <div>
+          <p class="about-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ut
+            tempore repellat molestias a distinctio fuga molestiae eaque
+            laborum vero eos, maiores fugit culpa porro delectus aliquam
+            ad
+            necessitatibus asperiores officiis. Dolores nemo voluptates.
+            <br /><br />
+            Adipisicing elit. Illum reprehenderit sapiente at ab amet, nobis
+            porro pariatur similique dicta nisi velit fugiat reiciendis, quos
+            fuga nemo aliquam aspernatur est vel. Lorem ipsum dolor sit amet
+            consectm dolor
+            sit.
+          </p>
+        </div>
+      </section>
+
+
+
     <section id="contact-us">
         <h1>Get in Touch!</h1>
         {{-- flash message --}}
         @include('include.statuses')
         <!-- contact info -->
         <div class="container">
-            <div class="contact-info">
-                <div class="specific-info">
-                    <i class="fas fa-home"></i>
-                    <div>
-                        <p class="title">4th floor, Hi Center</p>
-                        <p class="subtitle">Moi Avenue</p>
-                    </div>
-                </div>
-                <div class="specific-info">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <a href="">+254 720 XXX XXX </a>
-                        <br />
-                        <a href="">+254 721 XXX XXX</a>
-
-                        <p class="subtitle">Mon to Fri 9am-6pm</p>
-                    </div>
-                </div>
-                <div class="specific-info">
-                    <i class="fas fa-envelope-open-text"></i>
-                    <div>
-                        <a href="mailto:info@alphayo.co.ke">
-                            <p class="title">info@alphayo.co.ke</p>
-                        </a>
-                        <p class="subtitle">Send us your query anytime!</p>
-                    </div>
-                </div>
-            </div>
-
+            
             <!-- Contact Form -->
             <div class="contact-form">
                 <form action="{{ route('contact.store') }}" method="post">
@@ -73,6 +71,7 @@
                     <input type="submit" value="Submit" />
                 </form>
             </div>
+
         </div>
     </section>
 </main>
