@@ -49,11 +49,10 @@
 
         <!-- sidebar footer -->
         <footer class="sidebar-footer">
-          <small>Handles</small>
           <div>
-            <a href="#business-news"><i class="fab fa-facebook-f"></i></a>
-            <a href="#business-news"><i class="fab fa-instagram"></i></a>
-            <a href="#business-news"><i class="fab fa-twitter"></i></a>
+            <a href="#facebook"><i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i></a>
+            <a href="#instagram"><i class="fab fa-instagram" style="font-size: 1.4rem;"></i></a>
+            <a href="#twitter"><i class="fab fa-twitter" style="font-size: 1.4rem;"></i></a>
           </div>
 
 
