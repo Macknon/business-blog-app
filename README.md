@@ -11,6 +11,8 @@
 - DBeaver
 - gitignore & readme
 
+#### ** Images Of Application in AppImage Folder **
+
 ### Business Blog Web App
 ### Macknon Injenga – SCCJ/01110/2018
 #### One Pager Assignment
