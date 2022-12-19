@@ -30,7 +30,7 @@ The scope will include:
 ##### 3.	High-Level Requirements
 The blog system is web based which will allow the business bloggers to login/register, create a blog, view and share the post and categorize them. 
 ##### 4.	Deliverables
-Deliverables are work products that are delivered to the customer, this app will have an enticing UI design pleasing to the eyes, responsive, ease in usage, wireframe via diagrams and a prototype. Also, an offer to review for feature advancements and bug reporting incase encountered.
+Deliverables are work products that are delivered to the customer, this app will have an enticing UI design pleasing to the eyes, responsive, ease in usage, wireframe via diagrams and a prototype [link](https://www.figma.com/file/vlXGEjDvnlrCRh4pTDzbGm/Business-Rev-App?node-id=2%3A2&t=0daZLG1ItKVoSgmN-1). Also, an offer to review for feature advancements and bug reporting incase encountered.
 ##### 5.	Affected Parties
 This web app is for business owners and business reviewers (reporter who addresses the quality of a company's products and services).
 ##### 6.	Implementation Plan

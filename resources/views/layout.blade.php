@@ -49,11 +49,10 @@
 
         <!-- sidebar footer -->
         <footer class="sidebar-footer">
-          <small>Handles</small>
           <div>
-            <a href="#business-news"><i class="fab fa-facebook-f"></i></a>
-            <a href="#business-news"><i class="fab fa-instagram"></i></a>
-            <a href="#business-news"><i class="fab fa-twitter"></i></a>
+            <a href="#facebook"><i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i></a>
+            <a href="#instagram"><i class="fab fa-instagram" style="font-size: 1.4rem;"></i></a>
+            <a href="#twitter"><i class="fab fa-twitter" style="font-size: 1.4rem;"></i></a>
           </div>
 
 
@@ -71,9 +70,8 @@
       <!-- Main footer -->
       <footer class="main-footer">
         <small>
-          3rd Suite Gr floor, Hope Center, Ave Park, Nairobi
-       <br> contacts: +254 720 001 001, +254 720 002 002
-       <br> Mail to: info@macknondesigns.co.ke
+ +254 720 001 001, +254 720 002 002
+       <br>info@macknondesigns.co.ke
        <br>
           &copy 2022 Macknon Designs
         </small>

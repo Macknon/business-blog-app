@@ -7,7 +7,7 @@
 
         <p class="time-and-author">
           {{$newsItem->created_at->diffForHumans()}}
-          <span>{{$newsItem->user->name}}</span>
+          <span>News by: {{$newsItem->user->name}}</span>
         </p>
 
         <div class="single-blog-post-ContentImage" data-aos="fade-left">

@@ -130,6 +130,7 @@ class BizNewsController extends Controller
 
         $relatedNews = $category->news()->where('id', '!=', $newsItem->id)->latest()->take(3)->get();
         return view('allNews.selected-news', compact('newsItem','relatedNews'));
+        //return view('allNews.selected-news', compact('newsItem','relatedNews'));
     }
 
     public function destroy(News $newsItem){

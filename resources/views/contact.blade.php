@@ -13,17 +13,11 @@
 
         <div>
           <p class="about-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ut
-            tempore repellat molestias a distinctio fuga molestiae eaque
-            laborum vero eos, maiores fugit culpa porro delectus aliquam
-            ad
-            necessitatibus asperiores officiis. Dolores nemo voluptates.
+            We are a news business with the business of bringing your business to light with a business platform
+            and to review businesses. We have a simple business app:
             <br /><br />
-            Adipisicing elit. Illum reprehenderit sapiente at ab amet, nobis
-            porro pariatur similique dicta nisi velit fugiat reiciendis, quos
-            fuga nemo aliquam aspernatur est vel. Lorem ipsum dolor sit amet
-            consectm dolor
-            sit.
+            Just register, Login after registration then start your business journey as you add your reviews.
+            You can also add a new busines category and start linking up posts related to the your business.
           </p>
         </div>
       </section>
